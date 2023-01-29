@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').addEventListener('submit', function() {
-        const name = document.querySelector('#name').value;
-        alert(`Hello,${name}!`)
-        
-    });
+        document.querySelector('form').onsubmit = () => {
+            const names = document.querySelector('#gh').value;
+            alert(`Hello , ${names}`)
+            document.querySelector('#gh').value = ''
 
-});
+            return false;
+    }
+
+})
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('button').forEach(function(button) {
-        button.onclick = function() {
-            document.querySelector('body').style.backgroundColor = button.dataset.color
-        }
-       
-    })
+    document.querySelector('select').onchange = function() {
+        document.querySelector('body').style.backgroundColor = this.value
+    }
+
     
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#btn').onclick = () => {
+        const inf = document.querySelector('#gh').value;
+        document.querySelector('h1').innerHTML = `Hello, ${inf}`
+        document.querySelector('#gh').value = ''
+
+        return false;
+    }
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#btn').addEventListener('click', function() {
-        document.querySelector('h1').innerHTML = `Hello, Vlad`
-    })
-})
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../count.my.net/css/style.css">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded' , function() {
+            document.querySelector('form').onsubmit = () => {
+                const task = document.querySelector('#ts').value
+                console.log(task)
+
+                const li = document.createElement('li')
+                li.innerHTML = task;
+                document.querySelector('#tasks').append(li);
+
+                document.querySelector('#ts').value = '';
+
+                //stop form from submitting
+                return false;
+        }
+        });
+    
+
+    </script>
+</head>
+<body>
+    <div class="new">
+        <h1>Tasks</h1>
+        <ul id="tasks">
+        
+        
+        
+        
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Введіть свій текст і узріть чудо</h2>
+        
+ 
+            <form>
+                <input  placeholder="Type yout text" type="text" id="ts">
+                <input type="submit">
+    
+            </form>
+            <a class="btn2" href="index.html">Перехід до попередньої сторінки</a>
+            <a  class='btn2' href="count.html">Перехід до наступної сторінки</a>
+
+    
+    </div>
+
+
+
+
+
+
+
+    
+</body>
+</html>

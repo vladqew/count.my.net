@@ -1,0 +1,41 @@
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    text-align: center;
+    
+    
+    
+
+}
+.slc {
+    margin-top: 10px;
+    text-align: center;
+}
+.btn2 {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 5px 5px;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+
+}
+.btn2:hover {
+    background-color: black;
+    color: #fff;
+    transition: .3s;
+}
+#tasks {
+    font-size: 18px;
+    font-weight: 700;
+}
+.new {
+    max-height: 100px;
+    max-width: 75px;
+    position: absolute;
+}
